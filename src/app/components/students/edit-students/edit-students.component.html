@@ -1,17 +1,26 @@
 <div class="container">
-  <h1 class="mb-3">Add New Student</h1>
+  <h1 class="mb-3">Edit Student</h1>
 
   <div class="row">
     <div class="col-6">
-      <form #form="ngForm" (ngSubmit)="addStudent()">
+      <form #form="ngForm">
         <div class="mb-3">
+          <label for="name">ID</label>
+          <input
+            type="text"
+            class="form-control"
+            id="id"
+            name="id"
+            readonly
+            [(ngModel)]="studentsDetails.id"
+          />
           <label for="name">Name</label>
           <input
             type="text"
             class="form-control"
             id="name"
             name="name"
-            [(ngModel)]="addStudents.name"
+            [(ngModel)]="studentsDetails.name"
           />
         </div>
         <div class="mb-3">
@@ -21,7 +30,7 @@
             class="form-control"
             id="email"
             name="email"
-            [(ngModel)]="addStudents.email"
+            [(ngModel)]="studentsDetails.email"
           />
         </div>
         <div class="mb-3">
@@ -31,7 +40,7 @@
             class="form-control"
             id="phone"
             name="phone"
-            [(ngModel)]="addStudents.phone"
+            [(ngModel)]="studentsDetails.phone"
           />
         </div>
         <div class="mb-3">
@@ -41,11 +50,11 @@
             class="form-control"
             id="faculty"
             name="faculty"
-            [(ngModel)]="addStudents.faculty"
+            [(ngModel)]="studentsDetails.faculty"
           />
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Save</button>
       </form>
     </div>
   </div>
