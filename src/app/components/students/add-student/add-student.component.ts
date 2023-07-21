@@ -20,7 +20,6 @@ export class AddStudentComponent implements OnInit {
   ngOnInit(): void {}
 
   addStudent() {
-    console.log(this.addStudents);
     this._service.addStuden(this.addStudents).subscribe({
       next: (st) => {
         this._router.navigate(['students']);
